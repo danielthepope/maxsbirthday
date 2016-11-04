@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="omgmog48.png" type="image/png">
+  <link rel="apple-touch-icon" href="omgmog128.png">
+  <meta name="apple-mobile-web-app-title" content="Max's B'Day">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Is it Max's Birthday?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+    }
+    .big {
+      font-size: 100px;
+      font-weight: bold;
+      margin: 30px 0;
+    }
+    .max {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Is it Max's Birthday?</h2>
+  <p class="big" id="result">No.</p>
+  <img class="max" src="omgmog.jpg">
+  <p>A weird little demo progressive web app by <a href="https://twitter.com/danielthepope">@danielthepope</a>.</p>
+  <script>
+  var now = new Date();
+  if (now.getDate() === 23 && now.getMonth() === 10) {
+    document.getElementById('result').innerText = 'Yes.';
+  }
+  </script>
+</body>
+</html>

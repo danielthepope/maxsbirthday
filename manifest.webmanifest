@@ -1,7 +1,7 @@
 {
   "name": "Is it Max's Birthday?",
   "short_name": "Max's B'day",
-  "start_url": ".",
+  "start_url": "/maxsbirthday/",
   "display": "standalone",
   "background_color": "#fff",
   "description": "A web app that tells you if it is Max's birthday or not.",

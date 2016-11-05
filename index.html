@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="omgmog48.png" type="image/png">
-  <link rel="apple-touch-icon" href="omgmog128.png">
+  <link rel="manifest" href="/maxsbirthday/manifest.webmanifest">
+  <link rel="icon" href="/maxsbirthday/omgmog48.png" type="image/png">
+  <link rel="apple-touch-icon" href="/maxsbirthday/omgmog128.png">
   <meta name="apple-mobile-web-app-title" content="Max's B'Day">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -33,6 +33,16 @@
   var now = new Date();
   if (now.getDate() === 23 && now.getMonth() === 10) {
     document.getElementById('result').innerText = 'Yes.';
+  }
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/maxsbirthday/sw.js', {scope: '/maxsbirthday/'})
+    .then(function(reg) {
+      // registration worked
+      console.log('Registration succeeded. Scope is ' + reg.scope);
+    }).catch(function(error) {
+      // registration failed
+      console.log('Registration failed with ' + error);
+    });
   }
   </script>
 </body>
